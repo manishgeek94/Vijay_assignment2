@@ -8,7 +8,7 @@ def create_resource():
     }
     try:
         resp = requests.get('http://127.0.0.1:8000/rest_api/api/', data=json.dumps(new_data),
-                            timeout=0.0000000000000002)
+                            timeout=0.02)
         print(resp.status_code)
         print(resp.json())
     except requests.exceptions.ReadTimeout:
